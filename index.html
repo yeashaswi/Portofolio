@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yashaswi Vunnam — Portfolio</title>
+  <title>Yashaswi Vunnam | Portfolio</title>
   
   <!-- Tailwind CSS, Fonts & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <script>
@@ -18,90 +18,59 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['Newsreader', 'Georgia', 'serif'],
-            sans: ['Figtree', 'system-ui', '-apple-system', 'sans-serif'],
+            sans: ['"Space Grotesk"', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            bg: '#18181A',
-            side: '#1E1E21',
-            panel: '#232326',
-            raised: '#2C2C30',
-            line: '#36363B',
-            lineSoft: '#2A2A2E',
-            dim: '#85858D',
-            textSecondary: '#BFBFC5',
-            textPrimary: '#F4F4F6',
-            accent: '#E05656',
-            sage: '#5BA887'
+            mono: {
+              950: '#09090b',
+              900: '#121215',
+              850: '#18181b',
+              800: '#27272a',
+              700: '#3f3f46',
+              400: '#a1a1aa',
+              300: '#d4d4d8',
+              100: '#f4f4f5',
+            }
           }
         }
       }
     }
   </script>
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #18181A;
-      --panel: #232326;
-      --raised: #2C2C30;
-      --line: #36363B;
-      --dim: #85858D;
-      --text: #BFBFC5;
-      --hi: #F4F4F6;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Figtree', sans-serif;
-      font-size: 15.5px;
-      line-height: 1.62;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3, .font-serif {
-      font-family: 'Newsreader', Georgia, serif;
-    }
     ::selection {
-      background: var(--hi);
-      color: var(--bg);
+      background: #ffffff;
+      color: #000000;
     }
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--line);
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #4E4E56;
+    .subtle-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
   </style>
 </head>
-<body class="bg-[#18181A] text-[#BFBFC5] font-sans antialiased selection:bg-[#F4F4F6] selection:text-[#18181A]">
+<body class="bg-mono-950 text-mono-100 font-sans antialiased subtle-grid selection:bg-white selection:text-black">
 
   <!-- Top Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#18181A]/85 border-b border-[#2A2A2E]">
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-mono-950/80 border-b border-mono-800">
     <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="#hero" class="font-serif text-base tracking-tight text-[#F4F4F6] hover:text-white transition">
+      <a href="#hero" class="font-mono text-xs tracking-widest text-mono-300 uppercase hover:text-white transition">
         Yashaswi Vunnam
       </a>
       
-      <nav class="hidden md:flex items-center space-x-6 text-xs text-[#85858D]">
-        <a href="#focus" class="hover:text-[#F4F4F6] transition-colors">Interests</a>
-        <a href="#smartsort" class="hover:text-[#F4F4F6] transition-colors">Smart Sort</a>
-        <a href="#inspector" class="hover:text-[#F4F4F6] transition-colors">Approach</a>
-        <a href="#education" class="hover:text-[#F4F4F6] transition-colors">Education</a>
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-mono text-mono-400">
+        <a href="#focus" class="hover:text-white transition-colors">Interests</a>
+        <a href="#smartsort" class="hover:text-white transition-colors">Smart Sort</a>
+        <a href="#inspector" class="hover:text-white transition-colors">Approach</a>
+        <a href="#education" class="hover:text-white transition-colors">Education</a>
       </nav>
 
-      <div class="flex items-center space-x-3 text-[#85858D] text-sm">
-        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="hover:text-[#F4F4F6] transition-colors p-1" title="GitHub Profile">
+      <div class="flex items-center space-x-3 text-mono-400 text-sm">
+        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors p-1" title="GitHub Profile">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F4F4F6] transition-colors p-1" title="LinkedIn Profile">
+        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors p-1" title="LinkedIn Profile">
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
@@ -111,32 +80,32 @@
   <!-- Hero Section -->
   <section id="hero" class="min-h-[80vh] flex flex-col justify-center max-w-5xl mx-auto px-6 pt-24 pb-12">
     <div class="space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-[#36363B] bg-[#232326] text-[#85858D] font-mono text-xs">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#5BA887]"></span>
-        B.Tech in Computer Science and Engineering &bull; VIT Vellore
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-mono-800 bg-mono-900 text-mono-300 font-mono text-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+        B.Tech in Computer Science and Engineering • VIT Vellore
       </div>
 
       <div class="space-y-2">
-        <p class="text-[#85858D] text-sm sm:text-base font-serif italic">Hi, I'm</p>
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-medium tracking-tight text-[#F4F4F6]">
+        <p class="text-mono-400 text-sm sm:text-base font-mono">Hi, I'm</p>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white">
           Yashaswi Vunnam.
         </h1>
-        <p class="text-lg sm:text-xl font-light text-[#BFBFC5] pt-1 max-w-2xl leading-relaxed">
+        <p class="text-lg sm:text-xl font-light text-mono-300 pt-1 max-w-2xl leading-snug">
           Computer Science student exploring machine learning, applied mathematics, and robotics.
         </p>
       </div>
 
-      <p class="text-[#85858D] text-sm sm:text-base max-w-2xl leading-relaxed font-normal">
+      <p class="text-mono-400 text-sm sm:text-base max-w-2xl leading-relaxed font-normal">
         I’m currently pursuing my B.Tech in Computer Science and Engineering at VIT Vellore. My interest in artificial intelligence stemmed from a curiosity about mathematics—how linear algebra, optimization, and probability make sense of data and enable machines to interact with the physical world.
       </p>
 
       <!-- Profile Links -->
       <div class="flex flex-wrap items-center gap-3 pt-1">
-        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#232326] border border-[#36363B] text-xs font-mono text-[#BFBFC5] hover:border-[#47474E] hover:text-[#F4F4F6] transition-all">
+        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-mono-900 border border-mono-800 text-xs font-mono text-mono-200 hover:border-white hover:text-white transition-all">
           <i class="fa-brands fa-github text-sm"></i>
           <span>github.com/yeashaswi</span>
         </a>
-        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#232326] border border-[#36363B] text-xs font-mono text-[#BFBFC5] hover:border-[#47474E] hover:text-[#F4F4F6] transition-all">
+        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-mono-900 border border-mono-800 text-xs font-mono text-mono-200 hover:border-white hover:text-white transition-all">
           <i class="fa-brands fa-linkedin text-sm"></i>
           <span>LinkedIn Profile</span>
         </a>
@@ -145,33 +114,33 @@
   </section>
 
   <!-- Focus Areas -->
-  <section id="focus" class="py-16 px-6 max-w-5xl mx-auto border-t border-[#2A2A2E]">
+  <section id="focus" class="py-16 px-6 max-w-5xl mx-auto border-t border-mono-800">
     <div class="mb-8">
-      <span class="text-xs font-mono uppercase tracking-widest text-[#85858D] block mb-1">Interests</span>
-      <h2 class="text-2xl font-serif font-medium text-[#F4F4F6]">Areas of Exploration</h2>
+      <span class="text-xs font-mono uppercase tracking-widest text-mono-400 block mb-1">Interests</span>
+      <h2 class="text-2xl font-bold text-white">Areas of Exploration</h2>
     </div>
 
     <div class="grid sm:grid-cols-3 gap-4">
-      <div class="p-5 rounded-xl border border-[#36363B] bg-[#232326] hover:border-[#47474E] transition-colors">
-        <div class="font-mono text-xs text-[#85858D] mb-2">01. Theory</div>
-        <h3 class="text-sm font-semibold text-[#F4F4F6] mb-2">Math in Machine Learning</h3>
-        <p class="text-xs text-[#85858D] leading-relaxed">
+      <div class="p-5 rounded-lg border border-mono-800 bg-mono-900/30 hover:border-mono-700 transition-colors">
+        <div class="font-mono text-xs text-mono-400 mb-2">01. Theory</div>
+        <h3 class="text-sm font-semibold text-white mb-2">Math in Machine Learning</h3>
+        <p class="text-xs text-mono-400 leading-relaxed">
           Understanding the math behind learning algorithms—linear algebra for representations, gradients for optimization, and probability for uncertainty.
         </p>
       </div>
 
-      <div class="p-5 rounded-xl border border-[#36363B] bg-[#232326] hover:border-[#47474E] transition-colors">
-        <div class="font-mono text-xs text-[#85858D] mb-2">02. Perception</div>
-        <h3 class="text-sm font-semibold text-[#F4F4F6] mb-2">Computer Vision</h3>
-        <p class="text-xs text-[#85858D] leading-relaxed">
+      <div class="p-5 rounded-lg border border-mono-800 bg-mono-900/30 hover:border-mono-700 transition-colors">
+        <div class="font-mono text-xs text-mono-400 mb-2">02. Perception</div>
+        <h3 class="text-sm font-semibold text-white mb-2">Computer Vision</h3>
+        <p class="text-xs text-mono-400 leading-relaxed">
           Working with image classification and detection models designed for real-time inference on lightweight systems.
         </p>
       </div>
 
-      <div class="p-5 rounded-xl border border-[#36363B] bg-[#232326] hover:border-[#47474E] transition-colors">
-        <div class="font-mono text-xs text-[#85858D] mb-2">03. Physical Systems</div>
-        <h3 class="text-sm font-semibold text-[#F4F4F6] mb-2">Robotics & Hardware</h3>
-        <p class="text-xs text-[#85858D] leading-relaxed">
+      <div class="p-5 rounded-lg border border-mono-800 bg-mono-900/30 hover:border-mono-700 transition-colors">
+        <div class="font-mono text-xs text-mono-400 mb-2">03. Physical Systems</div>
+        <h3 class="text-sm font-semibold text-white mb-2">Robotics & Hardware</h3>
+        <p class="text-xs text-mono-400 leading-relaxed">
           Connecting code to the physical world by pairing model outputs with sensors, microcontrollers, and actuators.
         </p>
       </div>
@@ -179,47 +148,47 @@
   </section>
 
   <!-- Smart Sort Section -->
-  <section id="smartsort" class="py-16 px-6 max-w-5xl mx-auto border-t border-[#2A2A2E]">
+  <section id="smartsort" class="py-16 px-6 max-w-5xl mx-auto border-t border-mono-800">
     <div class="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-[#85858D] block mb-1">Project</span>
-        <h2 class="text-2xl font-serif font-medium text-[#F4F4F6]">Smart Sort — Waste Segregation System</h2>
+        <span class="text-xs font-mono uppercase tracking-widest text-mono-400 block mb-1">Project</span>
+        <h2 class="text-2xl font-bold text-white">Smart Sort — Waste Segregation System</h2>
       </div>
       <div>
-        <span class="px-2.5 py-1 rounded-lg bg-[#232326] border border-[#36363B] text-[#BFBFC5] font-mono text-xs">
+        <span class="px-2.5 py-1 rounded bg-mono-900 border border-mono-700 text-mono-300 font-mono text-xs">
           SIH Round 3 Qualified
         </span>
       </div>
     </div>
 
-    <p class="text-xs text-[#85858D] mb-6 max-w-3xl leading-relaxed">
+    <p class="text-xs text-mono-400 mb-6 max-w-3xl leading-relaxed">
       A project built for the Smart India Hackathon to automate solid waste sorting at the point of disposal using computer vision and mechanical diverters.
     </p>
 
-    <div class="border border-[#36363B] rounded-xl bg-[#1E1E21] font-mono text-xs overflow-hidden shadow-sm">
+    <div class="border border-mono-800 rounded-lg bg-mono-950 font-mono text-xs overflow-hidden">
       <!-- Tabs -->
-      <div class="flex flex-wrap border-b border-[#2A2A2E] bg-[#18181A]">
-        <button onclick="setSmartSortNode('context')" id="ss-btn-context" class="px-4 py-3 text-[#F4F4F6] border-b-2 border-[#F4F4F6] font-medium transition">
+      <div class="flex flex-wrap border-b border-mono-800 bg-mono-900/40">
+        <button onclick="setSmartSortNode('context')" id="ss-btn-context" class="px-4 py-3 text-white border-b-2 border-white font-semibold transition">
           1. The Need in India
         </button>
-        <button onclick="setSmartSortNode('architecture')" id="ss-btn-architecture" class="px-4 py-3 text-[#85858D] border-b-2 border-transparent hover:text-[#F4F4F6] transition">
+        <button onclick="setSmartSortNode('architecture')" id="ss-btn-architecture" class="px-4 py-3 text-mono-400 border-b-2 border-transparent hover:text-white transition">
           2. How It Works
         </button>
-        <button onclick="setSmartSortNode('challenges')" id="ss-btn-challenges" class="px-4 py-3 text-[#85858D] border-b-2 border-transparent hover:text-[#F4F4F6] transition">
+        <button onclick="setSmartSortNode('challenges')" id="ss-btn-challenges" class="px-4 py-3 text-mono-400 border-b-2 border-transparent hover:text-white transition">
           3. Challenges
         </button>
-        <button onclick="setSmartSortNode('status')" id="ss-btn-status" class="px-4 py-3 text-[#85858D] border-b-2 border-transparent hover:text-[#F4F4F6] transition">
+        <button onclick="setSmartSortNode('status')" id="ss-btn-status" class="px-4 py-3 text-mono-400 border-b-2 border-transparent hover:text-white transition">
           4. Current Status
         </button>
       </div>
 
       <!-- Panel -->
-      <div id="smartsort-panel" class="p-6 font-sans text-xs sm:text-sm text-[#BFBFC5] leading-relaxed min-h-[140px] bg-[#232326]">
-        <h4 class="font-mono text-[#85858D] uppercase text-xs tracking-wider mb-2">Context</h4>
+      <div id="smartsort-panel" class="p-6 font-sans text-xs sm:text-sm text-mono-300 leading-relaxed min-h-[140px]">
+        <h4 class="font-mono text-mono-400 uppercase text-xs tracking-wider mb-2">Context</h4>
         <p class="mb-2">
           India generates massive quantities of municipal solid waste daily, but the majority ends up unsegregated in landfills. This makes recycling difficult, pollutes soil and groundwater, and creates unsafe manual sorting conditions.
         </p>
-        <p class="text-[#85858D] text-xs">
+        <p class="text-mono-400 text-xs">
           Automating segregation directly when waste is thrown helps separate wet, dry, and recyclable items before they contaminate each other.
         </p>
       </div>
@@ -227,36 +196,36 @@
   </section>
 
   <!-- Engineering Approach -->
-  <section id="inspector" class="py-16 px-6 max-w-5xl mx-auto border-t border-[#2A2A2E]">
+  <section id="inspector" class="py-16 px-6 max-w-5xl mx-auto border-t border-mono-800">
     <div class="flex items-center justify-between mb-6">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-[#85858D] block mb-1">Perspective</span>
-        <h2 class="text-2xl font-serif font-medium text-[#F4F4F6]">How I Approach Problems</h2>
+        <span class="text-xs font-mono uppercase tracking-widest text-mono-400 block mb-1">Perspective</span>
+        <h2 class="text-2xl font-bold text-white">How I Approach Problems</h2>
       </div>
-      <span class="text-xs font-mono text-[#85858D]">Select a phase</span>
+      <span class="text-xs font-mono text-mono-400">Select a phase</span>
     </div>
 
-    <div class="border border-[#36363B] rounded-xl bg-[#1E1E21] overflow-hidden font-mono shadow-sm">
-      <div class="px-4 py-2.5 bg-[#18181A] border-b border-[#2A2A2E] flex items-center justify-between text-xs text-[#85858D]">
-        <span class="text-[#BFBFC5]">Workflow</span>
+    <div class="border border-mono-800 rounded-lg bg-mono-950 overflow-hidden font-mono">
+      <div class="px-4 py-2.5 bg-mono-900/60 border-b border-mono-800 flex items-center justify-between text-xs text-mono-400">
+        <span class="text-mono-300">Workflow</span>
         <span>Interactive</span>
       </div>
 
-      <div class="p-6 bg-[#232326]">
+      <div class="p-6">
         <div class="flex flex-wrap gap-2 mb-6">
-          <button onclick="setInspector('breakdown')" id="btn-breakdown" class="px-3 py-1.5 rounded-lg text-xs border border-[#36363B] bg-[#2C2C30] text-[#F4F4F6] font-medium transition shadow-sm">
+          <button onclick="setInspector('breakdown')" id="btn-breakdown" class="px-3 py-1.5 rounded text-xs border border-white bg-white text-black font-semibold transition">
             1. Problem Breakdown
           </button>
-          <button onclick="setInspector('model')" id="btn-model" class="px-3 py-1.5 rounded-lg text-xs border border-[#2A2A2E] bg-[#1E1E21] text-[#85858D] hover:text-[#F4F4F6] transition">
+          <button onclick="setInspector('model')" id="btn-model" class="px-3 py-1.5 rounded text-xs border border-mono-800 bg-mono-900 text-mono-400 hover:text-white transition">
             2. Choosing the Approach
           </button>
-          <button onclick="setInspector('testing')" id="btn-testing" class="px-3 py-1.5 rounded-lg text-xs border border-[#2A2A2E] bg-[#1E1E21] text-[#85858D] hover:text-[#F4F4F6] transition">
+          <button onclick="setInspector('testing')" id="btn-testing" class="px-3 py-1.5 rounded text-xs border border-mono-800 bg-mono-900 text-mono-400 hover:text-white transition">
             3. Physical Testing
           </button>
         </div>
 
-        <div id="inspector-output" class="p-4 rounded-lg bg-[#1E1E21] border border-[#2A2A2E] text-xs text-[#BFBFC5] leading-relaxed font-sans">
-          <p class="text-[#85858D] mb-1 font-mono text-xs font-semibold">Phase: Problem Breakdown</p>
+        <div id="inspector-output" class="p-4 rounded bg-mono-900/40 border border-mono-800 text-xs text-mono-300 leading-relaxed font-sans">
+          <p class="text-mono-400 mb-1 font-mono text-xs font-semibold">Phase: Problem Breakdown</p>
           <p>"Before jumping straight to code or models, I break the problem down into simple constraints and check whether machine learning is actually required or if simple logic solves it better."</p>
         </div>
       </div>
@@ -264,60 +233,60 @@
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="py-16 px-6 max-w-5xl mx-auto border-t border-[#2A2A2E]">
+  <section id="education" class="py-16 px-6 max-w-5xl mx-auto border-t border-mono-800">
     <div class="mb-8">
-      <span class="text-xs font-mono uppercase tracking-widest text-[#85858D] block mb-1">Timeline</span>
-      <h2 class="text-2xl font-serif font-medium text-[#F4F4F6]">Education</h2>
+      <span class="text-xs font-mono uppercase tracking-widest text-mono-400 block mb-1">Timeline</span>
+      <h2 class="text-2xl font-bold text-white">Education</h2>
     </div>
 
-    <div class="border-l border-[#36363B] ml-2 md:ml-4 space-y-6">
+    <div class="border-l border-mono-800 ml-2 md:ml-4 space-y-6">
 
       <!-- 1. Vagdevi Vilas (2011 - 2017) -->
       <div class="relative pl-6">
-        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#36363B] border border-[#18181A]"></div>
-        <div class="border border-[#36363B] rounded-xl p-4 bg-[#232326] font-mono text-xs shadow-sm">
-          <div class="flex justify-between items-center text-[#85858D] mb-1">
+        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-mono-700 border border-mono-950"></div>
+        <div class="border border-mono-800 rounded-lg p-4 bg-mono-900/20 font-mono text-xs">
+          <div class="flex justify-between items-center text-mono-400 mb-1">
             <span>Marathahalli, Bengaluru</span>
-            <span class="border border-[#2A2A2E] bg-[#1E1E21] px-2 py-0.5 rounded text-[#85858D]">2011 &ndash; 2017</span>
+            <span class="border border-mono-800 px-2 py-0.5 rounded text-mono-300">2011 – 2017</span>
           </div>
-          <h3 class="text-sm font-semibold text-[#F4F4F6] font-sans">Vagdevi Vilas School</h3>
+          <h3 class="text-sm font-semibold text-white font-sans">Vagdevi Vilas School</h3>
         </div>
       </div>
 
       <!-- 2. Sri Chaitanya (2018 - 2023) -->
       <div class="relative pl-6">
-        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#36363B] border border-[#18181A]"></div>
-        <div class="border border-[#36363B] rounded-xl p-4 bg-[#232326] font-mono text-xs shadow-sm">
-          <div class="flex justify-between items-center text-[#85858D] mb-1">
+        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-mono-700 border border-mono-950"></div>
+        <div class="border border-mono-800 rounded-lg p-4 bg-mono-900/20 font-mono text-xs">
+          <div class="flex justify-between items-center text-mono-400 mb-1">
             <span>Marathahalli, Bengaluru</span>
-            <span class="border border-[#2A2A2E] bg-[#1E1E21] px-2 py-0.5 rounded text-[#85858D]">2018 &ndash; 2023</span>
+            <span class="border border-mono-800 px-2 py-0.5 rounded text-mono-300">2018 – 2023</span>
           </div>
-          <h3 class="text-sm font-semibold text-[#F4F4F6] font-sans">Sri Chaitanya</h3>
+          <h3 class="text-sm font-semibold text-white font-sans">Sri Chaitanya</h3>
         </div>
       </div>
 
       <!-- 3. Vagdevi Vilas (2024 - 2026) -->
       <div class="relative pl-6">
-        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#36363B] border border-[#18181A]"></div>
-        <div class="border border-[#36363B] rounded-xl p-4 bg-[#232326] font-mono text-xs shadow-sm">
-          <div class="flex justify-between items-center text-[#85858D] mb-1">
+        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-mono-700 border border-mono-950"></div>
+        <div class="border border-mono-800 rounded-lg p-4 bg-mono-900/20 font-mono text-xs">
+          <div class="flex justify-between items-center text-mono-400 mb-1">
             <span>Marathahalli, Bengaluru</span>
-            <span class="border border-[#2A2A2E] bg-[#1E1E21] px-2 py-0.5 rounded text-[#85858D]">2024 &ndash; 2026</span>
+            <span class="border border-mono-800 px-2 py-0.5 rounded text-mono-300">2024 – 2026</span>
           </div>
-          <h3 class="text-sm font-semibold text-[#F4F4F6] font-sans">Vagdevi Vilas School</h3>
+          <h3 class="text-sm font-semibold text-white font-sans">Vagdevi Vilas School</h3>
         </div>
       </div>
 
       <!-- 4. VIT Vellore (2026 - 2030) -->
       <div class="relative pl-6">
-        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#5BA887] border border-[#18181A]"></div>
-        <div class="border border-[#36363B] rounded-xl p-4 bg-[#232326] font-mono text-xs shadow-sm">
-          <div class="flex justify-between items-center text-[#85858D] mb-1">
+        <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white border border-mono-950 animate-pulse"></div>
+        <div class="border border-mono-700 rounded-lg p-4 bg-mono-900/40 font-mono text-xs">
+          <div class="flex justify-between items-center text-mono-400 mb-1">
             <span>Vellore, Tamil Nadu</span>
-            <span class="border border-[#5BA887]/30 bg-[#5BA887]/15 px-2 py-0.5 rounded text-[#5BA887] font-semibold">2026 &ndash; 2030</span>
+            <span class="border border-mono-700 px-2 py-0.5 rounded text-white font-semibold">2026 – 2030</span>
           </div>
-          <h3 class="text-sm font-semibold text-[#F4F4F6] font-sans">Vellore Institute of Technology (VIT)</h3>
-          <p class="text-[#BFBFC5] font-sans text-xs mt-1">B.Tech in Computer Science and Engineering</p>
+          <h3 class="text-sm font-semibold text-white font-sans">Vellore Institute of Technology (VIT)</h3>
+          <p class="text-mono-300 font-sans text-xs mt-1">B.Tech in Computer Science and Engineering</p>
         </div>
       </div>
 
@@ -325,27 +294,27 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-[#2A2A2E] max-w-5xl mx-auto px-6">
+  <footer class="py-12 border-t border-mono-900 max-w-5xl mx-auto px-6">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="text-center sm:text-left">
-        <p class="text-sm font-serif font-medium text-[#F4F4F6]">Yashaswi Vunnam</p>
-        <p class="text-xs text-[#85858D] font-mono">B.Tech CSE &bull; VIT Vellore</p>
+        <p class="text-sm font-medium text-white">Yashaswi Vunnam</p>
+        <p class="text-xs text-mono-500 font-mono">B.Tech CSE • VIT Vellore</p>
       </div>
 
-      <div class="flex items-center space-x-6 text-[#85858D] text-sm">
-        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="hover:text-[#F4F4F6] transition-colors flex items-center gap-2">
+      <div class="flex items-center space-x-6 text-mono-400 text-sm">
+        <a href="https://github.com/yeashaswi" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
           <i class="fa-brands fa-github"></i>
           <span class="text-xs font-mono">GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="hover:text-[#F4F4F6] transition-colors flex items-center gap-2">
+        <a href="https://www.linkedin.com/in/yashaswi-vunnam-716b8a264/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
           <i class="fa-brands fa-linkedin"></i>
           <span class="text-xs font-mono">LinkedIn</span>
         </a>
       </div>
     </div>
     
-    <div class="mt-8 text-center font-mono text-[11px] text-[#6A6A72]">
-      &copy; Yashaswi Vunnam &middot; Peaceful Dark Theme
+    <div class="mt-8 text-center font-mono text-[11px] text-mono-700">
+      &copy; Yashaswi Vunnam • Clean Monochrome Theme
     </div>
   </footer>
 
@@ -359,7 +328,7 @@
           <p class="mb-2">
             India generates massive quantities of municipal solid waste daily, but the majority ends up unsegregated in landfills. This makes recycling difficult, pollutes soil and groundwater, and creates unsafe manual sorting conditions.
           </p>
-          <p class="text-[#85858D] text-xs">
+          <p class="text-mono-400 text-xs">
             Automating segregation directly when waste is thrown helps separate wet, dry, and recyclable items before they contaminate each other.
           </p>
         `
@@ -370,7 +339,7 @@
           <p class="mb-2">
             The system works through three coordinated steps:
           </p>
-          <ul class="space-y-1.5 text-xs text-[#85858D] mb-2 font-mono">
+          <ul class="space-y-1.5 text-xs text-mono-400 mb-2 font-mono">
             <li>1. Capture: An overhead camera photographs the discarded item.</li>
             <li>2. Inference: An edge vision model determines the material category.</li>
             <li>3. Actuation: Mechanical flaps drop the item into the correct bin.</li>
@@ -381,9 +350,9 @@
         title: "Practical Hurdles",
         content: `
           <ul class="space-y-2 text-xs">
-            <li><strong class="text-[#F4F4F6]">Singulation:</strong> Real garbage clumps together; separating individual items mechanically is harder than the software classification itself.</li>
-            <li><strong class="text-[#F4F4F6]">Soiled Items:</strong> A crumpled bottle covered in food residue is difficult for standard vision models to classify correctly.</li>
-            <li><strong class="text-[#F4F4F6]">Liquid Drainage:</strong> Handling wet waste without moisture damaging internal servos and electronics.</li>
+            <li><strong>Singulation:</strong> Real garbage clumps together; separating individual items mechanically is harder than the software classification itself.</li>
+            <li><strong>Soiled Items:</strong> A crumpled bottle covered in food residue is difficult for standard vision models to classify correctly.</li>
+            <li><strong>Liquid Drainage:</strong> Handling wet waste without moisture damaging internal servos and electronics.</li>
           </ul>
         `
       },
@@ -391,9 +360,9 @@
         title: "Hackathon Status",
         content: `
           <p class="mb-2">
-            Built as a team submission for the Smart India Hackathon (SIH), successfully qualifying through <strong class="text-[#F4F4F6]">Round 3</strong>.
+            Built as a team submission for the Smart India Hackathon (SIH), successfully qualifying through <strong>Round 3</strong>.
           </p>
-          <p class="text-[#85858D] text-xs">
+          <p class="text-mono-400 text-xs">
             Currently awaiting evaluation results for the subsequent stage.
           </p>
         `
@@ -405,16 +374,16 @@
       const item = smartSortData[key];
 
       panel.innerHTML = `
-        <h4 class="font-mono text-[#85858D] uppercase text-xs tracking-wider mb-2">${item.title}</h4>
+        <h4 class="font-mono text-mono-400 uppercase text-xs tracking-wider mb-2">${item.title}</h4>
         ${item.content}
       `;
 
       ['context', 'architecture', 'challenges', 'status'].forEach(k => {
         const btn = document.getElementById(`ss-btn-${k}`);
         if (k === key) {
-          btn.className = "px-4 py-3 text-[#F4F4F6] border-b-2 border-[#F4F4F6] font-medium transition";
+          btn.className = "px-4 py-3 text-white border-b-2 border-white font-semibold transition";
         } else {
-          btn.className = "px-4 py-3 text-[#85858D] border-b-2 border-transparent hover:text-[#F4F4F6] transition";
+          btn.className = "px-4 py-3 text-mono-400 border-b-2 border-transparent hover:text-white transition";
         }
       });
     }
@@ -440,16 +409,16 @@
       const item = data[key];
 
       output.innerHTML = `
-        <p class="text-[#85858D] mb-1 font-mono text-xs font-semibold">${item.stage}</p>
+        <p class="text-mono-400 mb-1 font-mono text-xs font-semibold">${item.stage}</p>
         <p>"${item.text}"</p>
       `;
 
       ['breakdown', 'model', 'testing'].forEach(k => {
         const btn = document.getElementById(`btn-${k}`);
         if (k === key) {
-          btn.className = "px-3 py-1.5 rounded-lg text-xs border border-[#36363B] bg-[#2C2C30] text-[#F4F4F6] font-medium transition shadow-sm";
+          btn.className = "px-3 py-1.5 rounded text-xs border border-white bg-white text-black font-semibold transition";
         } else {
-          btn.className = "px-3 py-1.5 rounded-lg text-xs border border-[#2A2A2E] bg-[#1E1E21] text-[#85858D] hover:text-[#F4F4F6] transition";
+          btn.className = "px-3 py-1.5 rounded text-xs border border-mono-800 bg-mono-900 text-mono-400 hover:text-white transition";
         }
       });
     }
